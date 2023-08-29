@@ -41,3 +41,7 @@ def editor(request):
     print(docid)
     return render(request,'editor.html',context)
     
+def delete_document(request,docid):
+    document=Document.objects.get(pk=docid)
+    document.delete()
+    return redirect('/?docid=0')

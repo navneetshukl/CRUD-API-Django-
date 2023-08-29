@@ -21,5 +21,6 @@ from notes import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.editor,name='editor')
+    path('',views.editor,name='editor'),
+    path('delete_document/<int:docid>/',views.delete_document,name='delete_document')
 ]
